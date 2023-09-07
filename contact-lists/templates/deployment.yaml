@@ -38,17 +38,5 @@ spec:
         ports:
         - containerPort: {{ .Values.appConfig.containerPort }}
           protocol: TCP
-        # livenessProbe:
-        #   httpGet:
-        #     path: /healthz
-        #     port: {{ .Values.appConfig.containerPort }}
-        #   initialDelaySeconds: 30
-        #   periodSeconds: 20
-        # readinessProbe:
-          httpGet:
-            path: /healthz
-            port: {{ .Values.appConfig.containerPort }}
-          initialDelaySeconds: 30
-          periodSeconds: 20
         resources:
 {{ toYaml .Values.appConfig.resources | indent 10 }}
