@@ -1,1 +1,1 @@
-# gitops-contacLists-parent
+# gitops-contact-lists
