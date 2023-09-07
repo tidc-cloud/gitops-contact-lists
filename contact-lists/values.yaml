@@ -4,14 +4,14 @@ global:
 appConfig:
   appName: contact-lists
   replicas: 1
-  image: tcr.tks.trueidc.com/portal/gcp-backend
+  image: ghcr.io/techguys-tidc/online-contact
   tag: v0.0.1
   imagePullPolicy: IfNotPresent
   imagePullSecretsName: regcred
   imagePullSecretsSource: 
-    create: false
+    create: true
     name: regcred
-    registry: https://ghcr.io/techguys-tidc/online-contact
+    registry: ghcr.io/techguys-tidc/online-contact
     username: 
     password: 
   containerPort: 8080

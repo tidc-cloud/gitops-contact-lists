@@ -8,5 +8,11 @@ appConfig:
   imagePullSecretsName: regcred
   containerPort: 8080
   environments:
+  imagePullSecretsSource: 
+    create: true
+    name: regcred
+    registry: ghcr.io/techguys-tidc/online-contact
+    username: git
+    password: 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
     
 
