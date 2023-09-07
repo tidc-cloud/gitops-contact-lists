@@ -2,7 +2,7 @@ global:
   env: dev
 
 appConfig:
-  image: ghcr.io/techguys-tidc/online-contact
+  image: ghcr.io/techguys-tidc
   tag: v0.0.1
   imagePullPolicy: IfNotPresent
   imagePullSecretsName: regcred
