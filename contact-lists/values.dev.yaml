@@ -1,0 +1,12 @@
+global:
+  env: dev
+
+appConfig:
+  image: ghcr.io/techguys-tidc/online-contact
+  tag: v0.0.1
+  imagePullPolicy: IfNotPresent
+  imagePullSecretsName: regcred
+  containerPort: 8080
+  environments:
+    
+
