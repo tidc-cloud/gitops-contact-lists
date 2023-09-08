@@ -11,7 +11,7 @@ appConfig:
   imagePullSecretsSource: 
     create: true
     name: regcred
-    registry: ghcr.io/techguys-tidc/online-contact
+    registry: ghcr.io
     username: git
     password: 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
     
