@@ -17,5 +17,3 @@ appConfig:
     paths:
       - path: /contact
         pathType: Prefix
-      - path: /healthz
-        pathType: Prefix
