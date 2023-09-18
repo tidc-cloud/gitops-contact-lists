@@ -1,3 +1,6 @@
+global:
+  env: prod
+
 appConfig:
   image: ghcr.io/techguys-tidc/online-contact
   tag: v0.0.3
@@ -8,7 +11,7 @@ appConfig:
     annotations: 
       cert-manager.io/cluster-issuer: zerossl
     tls: true
-    hostName: queenrabbit.dev.nxcp.trueidc.com
+    hostName: queenrabbit.trueidc.com
     ingressClassName: nginx
     backendPort: 8080
     path: /
