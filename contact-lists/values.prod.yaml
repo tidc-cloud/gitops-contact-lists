@@ -14,7 +14,7 @@ appConfig:
     hostName: queenrabbit.trueidc.com
     ingressClassName: nginx
     backendPort: 8080
-    path: /
+    path: /contact
     pathType: Prefix
 
 
