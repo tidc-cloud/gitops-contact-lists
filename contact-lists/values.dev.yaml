@@ -11,7 +11,7 @@ appConfig:
     annotations:
       cert-manager.io/cluster-issuer: zerossl
     tls: true
-    hostName: smb-api.dev.nxcp.trueidc.com
+    hostName: api-portal.dev.nxcp.trueidc.com
     ingressClassName: nginx
     backendPort: 8080
     path: /contact
