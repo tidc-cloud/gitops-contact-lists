@@ -8,10 +8,10 @@ appConfig:
   imagePullSecretsName: regcred
   containerPort: 8080
   ingress:
-    annotations:
+    annotations: 
       cert-manager.io/cluster-issuer: zerossl
     tls: true
-    hostName: api-portal.dev.nxcp.trueidc.com
+    hostName: cms-smb.dev.nxcp.trueidc.com
     ingressClassName: nginx
     backendPort: 8080
     path: /contact
