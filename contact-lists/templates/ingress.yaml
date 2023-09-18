@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.appConfig.appName }}-ingress
+  labels:
+{{ include "contact-lists.labels" . | indent 4 }}
+    app: {{ .Values.appConfig.appName }}-{{ .Values.global.env }}
+    name: {{ .Values.appConfig.appName }}-{{ .Values.global.env }}
+  annotations:
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    {{- if .Values.appConfig.ingress.annotations }}
+{{ toYaml .Values.appConfig.ingress.annotations | indent 4 }}
+    {{- end }}
+spec:
+  ingressClassName: {{ .Values.appConfig.ingress.ingressClassName }}
+  {{- if .Values.appConfig.ingress.tls }}
+  tls:
+  - hosts:
+    - {{ .Values.appConfig.ingress.hostName }}
+    secretName: {{ .Values.appConfig.appName }}-tls
+  {{- end }}
+  rules:
+  - host: {{ .Values.appConfig.ingress.hostName }}
+    http:
+      paths:
+      - backend:
+          service:
+            name: {{ .Values.appConfig.appName }}-{{ .Values.global.env }}-api-svc
+            port:
+              number: {{ .Values.appConfig.ingress.backendPort }}
+        path: {{ .Values.appConfig.ingress.path }}
+        pathType: {{ .Values.appConfig.ingress.pathType }}

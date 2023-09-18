@@ -22,6 +22,15 @@ appConfig:
     requests:
       cpu: 100m
       memory: 128Mi
+  ingress:
+    annotations: 
+      cert-manager.io/cluster-issuer: zerossl
+    tls: true
+    hostName: queenrabbit.dev.nxcp.trueidc.com
+    ingressClassName: nginx
+    backendPort: 8080
+    path: /
+    pathType: Prefix
   environments:
     CLIENT_ID: "5cca48c6-464e-4e58-9d2a-1963b1b430f9"
     TENANT_ID: "42a361ca-9860-439b-ae1e-9794ac0552b0"
