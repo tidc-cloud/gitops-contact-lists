@@ -3,16 +3,9 @@ global:
 
 appConfig:
   image: ghcr.io/techguys-tidc/online-contact
-  tag: v0.0.1
+  tag: v0.0.2
   imagePullPolicy: IfNotPresent
   imagePullSecretsName: regcred
   containerPort: 8080
-  environments:
-  imagePullSecretsSource: 
-    create: true
-    name: regcred
-    registry: ghcr.io
-    username: git
-    password: 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
-    
+
 

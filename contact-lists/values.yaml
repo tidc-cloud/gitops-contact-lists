@@ -5,7 +5,7 @@ appConfig:
   appName: contact-lists
   replicas: 1
   image: ghcr.io/techguys-tidc/online-contact
-  tag: v0.0.1
+  tag: v0.0.2
   imagePullPolicy: IfNotPresent
   imagePullSecretsName: regcred
   imagePullSecretsSource: 
@@ -23,5 +23,10 @@ appConfig:
       cpu: 100m
       memory: 128Mi
   environments:
-    
-
+    CLIENT_ID: "5cca48c6-464e-4e58-9d2a-1963b1b430f9"
+    TENANT_ID: "42a361ca-9860-439b-ae1e-9794ac0552b0"
+    CLIENT_SECRET: "7sP8Q~IoghCsi_uElQDa23vH1~kXkRW_QkA8jbR7"
+    DRIVE_ID: "b!C-QN7z0dVUmuV8DyF2yvc259bbGRbmFLtwHeYyFdxsXw9G85IweaS78t6hWkpeEQ"
+    DRIVE_ITEM_ID: "01CUPYAHCJGCWIVLOUAFHKVVS7N5SJS47I"
+    WORKSHEET_ID: "{241484D3-3178-4FB7-88AA-DB5F46498E8C}"
+    IMAGE_FOLDER_ID: "01CUPYAHDL6VLIQTZNTZBZAAR77PNU2ER5"
