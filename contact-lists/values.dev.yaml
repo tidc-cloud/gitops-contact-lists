@@ -14,6 +14,5 @@ appConfig:
     hostName: smb-api.dev.nxcp.trueidc.com
     ingressClassName: nginx
     backendPort: 8080
-    paths:
-      - path: /contact
-        pathType: Prefix
+    path: /contact
+    pathType: Prefix
