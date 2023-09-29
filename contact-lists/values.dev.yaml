@@ -3,7 +3,7 @@ global:
 
 appConfig:
   image: ghcr.io/techguys-tidc/online-contact
-  tag: vv0.0.6
+  tag: vv0.0.7
   imagePullPolicy: IfNotPresent
   imagePullSecretsName: regcred
   containerPort: 8080
