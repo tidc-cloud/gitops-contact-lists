@@ -26,7 +26,7 @@ appConfig:
     annotations: 
       cert-manager.io/cluster-issuer: zerossl
     tls: true
-    hostName: queenrabbit.dev.nxcp.trueidc.com
+    hostName: queenrabbit.dev.tks.trueidc.com
     ingressClassName: nginx
     backendPort: 8080
     path: /
